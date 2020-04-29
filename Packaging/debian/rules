@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+export DH_OPTIONS
+export COMPILE_FLAGS="-O0"
+export DESTDIR=$(CURDIR)/debian/bashtop
+
+PREFIX = /usr
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	rm -rf $(DESTDIR)/usr/bin/bashtop
+	rm -rf $(DESTDIR)/usr/share/doc/bashtop
+
+override_dh_auto_install:
+	install -pdm755 $(DESTDIR)/usr/bin
+	install -pdm755 $(DESTDIR)/usr/share/pixmaps
+	install -pdm755 $(DESTDIR)/usr/share/applications
+	install -Dm644 $(CURDIR)/bashtop $(DESTDIR)/usr/bin/bashtop
+	install -Dm644 $(CURDIR)/logo-t.png $(DESTDIR)/usr/share/pixmaps/bashtop.png
+	install -Dm644 $(CURDIR)/debian/Bashtop.desktop $(DESTDIR)/usr/share/applications/Bashtop.desktop
+	chmod 755 $(DESTDIR)/usr/bin/bashtop
+

@@ -1,0 +1,21 @@
+Source: bashtop
+Section: base
+Priority: optional
+Maintainer: aristocratos <admin@qvantnet.com>
+Uploaders: gogo <trebelnik2@gmail.com>
+Build-Depends:
+ debhelper (>= 9)
+Standards-Version: 4.3.0
+Homepage: https://github.com/aristocratos/bashtop
+Vcs-Git: git@github.com:aristocratos/bashtop.git
+Vcs-Browser: https://github.com/aristocratos/bashtop.git
+
+Package: bashtop
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends}, lm-sensors, curl,
+Description: Resource monitor that shows usage 
+    and stats for processor, memory, disks, network and processes
+ the best games of the 1990s 
+
