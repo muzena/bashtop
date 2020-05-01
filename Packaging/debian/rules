@@ -21,7 +21,7 @@ override_dh_auto_install:
 	install -pdm755 $(DESTDIR)/usr/share/pixmaps
 	install -pdm755 $(DESTDIR)/usr/share/applications
 	install -Dm644 $(CURDIR)/bashtop $(DESTDIR)/usr/bin/bashtop
-	install -Dm644 $(CURDIR)/logo-t.png $(DESTDIR)/usr/share/pixmaps/bashtop.png
+	install -Dm644 $(CURDIR)/Imgs/logo-t.png $(DESTDIR)/usr/share/pixmaps/bashtop.png
 	install -Dm644 $(CURDIR)/debian/Bashtop.desktop $(DESTDIR)/usr/share/applications/Bashtop.desktop
 	chmod 755 $(DESTDIR)/usr/bin/bashtop
 
